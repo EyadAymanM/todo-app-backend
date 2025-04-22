@@ -55,7 +55,7 @@ export const addTodo = (req, res) => {
 
         for (const task of tasks) {
           const text = task.task;
-          stmt.run(userId, text);
+          stmt.run(todoId, text);
         }
 
         stmt.finalize((stmtErr) => {

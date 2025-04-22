@@ -44,7 +44,7 @@ export const register = async (req,res)=>{
       function (err) {
         if (err) {
           console.error(err);
-          return res.status(400).json({ error: "Email already exists" });
+          return res.status(409).json({ error: "Email already exists" });
         }
 
         res.status(201).json({ id: this.lastID, email });
